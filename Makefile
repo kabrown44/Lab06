@@ -1,8 +1,8 @@
 AutomatedMakefile = am
 CC = g++
 
-FILES =  
-EXECUTABLE = 
+FILES =  Maze.o Cell.o MazeGUI.o
+EXECUTABLE = Maze.exe
 
 PROJECT_PATH = $(PROJECT_DIR)
 GTK_PATH = /$(DRIVE_LETTER)/MinGW/GTK
@@ -22,6 +22,15 @@ Project: 		$(FILES)
 
 Cell.o:			Cell.h Cell.cpp
 			$(COMPILE) Cell.cpp
+
+
+
+Maze.o:			StackLinked.h Maze.h Maze.cpp
+			$(COMPILE) Maze.cpp
+
+MazeGUI.o:		MazeGUI.h MazeGUI.cpp
+			$(COMPILE) MazeGUI.cpp
+
 
 
 
